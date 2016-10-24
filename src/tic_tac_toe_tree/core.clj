@@ -2,20 +2,6 @@
   (:gen-class))
 
 
-;**so, we think the results are wrong... top level should yield 0's and -1s!!
-
-;board: {[0 0] 1 [0 1] 1 [1 0] 1 [1 1] 2 [1 2] 2 [2 0] 2 [2 1] 2 [2 2] 1}  ;send it through win? first
-
-;[0 0] [0 1] [0 2] [1 0] [1 1] [1 2] [2 0] [2 1] [2 2]
-
-(ttt {[0 0] 1 [0 1] 2 [0 2] 1 
-      [1 0] 2 [1 1] nil [1 2] 2 
-      [2 0] nil [2 1] 2 [2 2] 2} 
-     
-     [2 0] 
-     true)
-
-
 (def board {})  ;sparse game board
 (def plays #{[0 0] [0 1] [0 2] [1 0] [1 1] [1 2] [2 0] [2 1] [2 2]})
 (def node-count (atom 0))
@@ -69,9 +55,3 @@
 ;(map #(ttt {} % true) plays)
 
 
-
-;-----
-(defn -main
-  "I don't do a whole lot ... yet."
-  [& args]
-  (println "Hello, World!"))
